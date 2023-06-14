@@ -8,6 +8,7 @@ func Insert(todo Todo) (id int64, err error) {
 	conn, err := db.OpenConnection()
 
 	if err != nil {
+		println(err)
 		return
 	}
 	defer conn.Close()
